@@ -8,7 +8,7 @@ import { AboutComponent } from './components/about/about.component';
 import { MenuComponent } from './components/menu/menu.component';
 
 const APP_ROUTES: Routes = [
-    { path: 'home', component: HomeComponent },
+    { path: '', component: HomeComponent },
     { path: 'about', component: AboutComponent },
     { path: 'menu', component: MenuComponent },
   

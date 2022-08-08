@@ -7,10 +7,13 @@ import { HomeComponent } from './components/home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MenuComponent } from './components/menu/menu.component';
 import { AboutComponent } from './components/about/about.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 //rutas 
 
-import {APP_ROUTING} from './app.routes';    
+import {APP_ROUTING} from './app.routes';
+import { FooterComponent } from './components/footer/footer.component';    
+import { menuService } from './services/menu.service';
 
 // componentes 
 
@@ -24,16 +27,18 @@ import {APP_ROUTING} from './app.routes';
     HeaderComponent,
     HomeComponent,
     MenuComponent,
-    AboutComponent
+    AboutComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
     CarouselModule,
-    APP_ROUTING
+    APP_ROUTING,
+    FontAwesomeModule
    
   ],
-  providers: [],
+  providers: [ menuService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

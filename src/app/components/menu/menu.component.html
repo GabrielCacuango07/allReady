@@ -1,7 +1,33 @@
-<p>menu works!</p>
+<div class="main-conted">
 
-  
-  
+
+  <h2>Hamburguesas</h2>
+    <div class="row row-cols-1 row-cols-md-3 animated fadeIn fadeFast">
+      <div class="col mb-4" *ngFor="let opcion of menu">
+        <div class="card">
+          <img [src]="opcion.imagen" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{ opcion.nombre}}</h5>
+            <p class="card-text">{{opcion.descripcion}}, {{opcion.ingredientes}}</p>
+          </div>
+          <div class="card-footer text-center">
+              <button class="btn btn-success btn-sm float-right"
+                      id="right" style="color:white">
+                  {{ opcion.precio}}
+              </button>
+            </div>
+        </div>
+      </div>
+      
+      
+    </div>
+    <div class="alert alert-success" role="alert">
+      Todas nuestras hamburguesas con nuestro pan tostado, papas fritas artesanales o frech fries.
+    </div>
+      
+</div>
+<div class="main-contend">
+  <h2>Appetizers</h2>
 
   <div class="row row-cols-1 row-cols-md-3 animated fadeIn fadeFast">
     <div class="col mb-4">
@@ -23,9 +49,15 @@
       <div class="card">
         <img src="../../../assets/img/hamburgesa.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
+          <h5 class="card-title">Cheese Burgues</h5>
           <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
         </div>
+        <div class="card-footer text-center">
+            <button class="btn btn-success btn-sm float-right"
+                    id="right" style="color:white">
+                $3.99
+            </button>
+          </div>
       </div>
     </div>
     <div class="col mb-4">
@@ -47,4 +79,9 @@
       </div>
     </div>
   </div>
-    
+ 
+
+</div>
+
+  
+  
